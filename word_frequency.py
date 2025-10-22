@@ -36,20 +36,20 @@ def get_sentence():
 
 def calculate_frequencies(sentence):
     words = []
-    frequencies = []
-
+    counts = []
     word_list = sentence[:-1].split()
 
-    for word in word_list:
-        word = word.lower()
-        if word in words:
-            index = words.index(word)
-            frequencies[index] += 1
+    for w in word_list:
+        w = w.lower()
+        if w in words:
+            position = words.index(w)
+            counts[position] = counts[position] + 1
         else:
-            words.append(word)
-            frequencies.append(1)
+            words.append(w)
+            counts.append(1)
 
-    return words, frequencies
+    return words, counts
+
 
 
 def print_frequencies(words, frequencies):
