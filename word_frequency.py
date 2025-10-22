@@ -64,5 +64,4 @@ def main():
     print_frequencies(words, frequencies)
 
 
-# Directly call main (no if __name__ check)
 main()
