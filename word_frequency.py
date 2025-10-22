@@ -54,8 +54,8 @@ def calculate_frequencies(sentence):
 
 def print_frequencies(words, frequencies):
     print("\nWord Frequencies:")
-    for word, freq in zip(words, frequencies):
-        print(f"{word}: {freq}")
+    for i in range(len(words)):
+        print(words[i] + ": " + str(frequencies[i]))
 
 
 def main():
