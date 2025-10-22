@@ -4,15 +4,18 @@
 # TODO: (Read detailed instructions in the Readme file)
 
 def get_user_input():
-    while True:
-        try:
-            terms = int(input("Enter the number of Fibonacci terms you want: "))
-            if terms <= 0:
-                print("Please enter a positive integer.")
-            else:
+    valid = False
+    while not valid:
+        user_input = input("Enter the number of Fibonacci terms you want: ")
+        if user_input.isdigit():
+            terms = int(user_input)
+            if terms > 0:
+                valid = True
                 return terms
-        except ValueError:
-            print("Invalid input. Please enter an integer.")
+            else:
+                print("Please enter a positive number.")
+        else:
+            print("Invalid input. Please enter a whole number.")
 
 
 def generate_fibonacci(n):
