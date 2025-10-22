@@ -25,8 +25,9 @@ def generate_fibonacci(n):
 
 
 def print_fibonacci(sequence):
+    """Print the Fibonacci sequence in a readable format."""
     print("\nFibonacci sequence:")
-    print(", ".join(map(str, sequence)))
+    print(*sequence, sep=", ")
 
 
 def main():
